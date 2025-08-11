@@ -172,11 +172,11 @@ const characters = [
   "Moana",
   "Rapunzel",
   "Merida",
-  "Belle",
-  "Ariel",
+  "Belle from Beauty and the Beast",
+  "Ariel from The Little Mermaid",
   "Cinderella",
   "Snow White",
-  "Aurora"
+  "Aurora (Singer)"
 ];
 
 const situations = [
