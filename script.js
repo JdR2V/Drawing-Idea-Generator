@@ -376,3 +376,42 @@ document.getElementById('characterBtn').addEventListener('click', function() {
 document.getElementById('situationBtn').addEventListener('click', function() {
     document.getElementById('situationPrompt').textContent = getRandomItem(situations);
 });
+
+
+function getRandomBGColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+const gradientArr = [
+    'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
+    'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
+    'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
+    'linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%)',
+    'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)',
+    'linear-gradient(120deg, #f093fb 0%, #f5576c 100%)',
+    'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
+    'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
+    'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
+    'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
+    'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
+    'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
+    'linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%)',
+    'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)',
+    'linear-gradient(120deg, #f093fb 0%, #f5576c 100%)',
+]
+
+function setRandomBackground() {
+    //const randomColor = getRandomBGColor();
+    //document.body.style.backgroundColor = randomColor;
+    const randomGradient = gradientArr[Math.floor(Math.random() * gradientArr.length)];
+    document.body.style.background = randomGradient;    
+}
+
+window.onload = setRandomBackground;
+
